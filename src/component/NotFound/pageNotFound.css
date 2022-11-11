@@ -1,0 +1,9 @@
+.notFound {
+    height: 100vh;
+  }
+  
+  .container_error {
+    text-align: center;
+    position: relative;
+    top: 50%;
+  }

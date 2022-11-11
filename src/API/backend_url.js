@@ -1,0 +1,1 @@
+export const BACKEND_URL = "https://stk-backend.herokuapp.com/";
