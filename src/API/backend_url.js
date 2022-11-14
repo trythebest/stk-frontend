@@ -1,1 +1,1 @@
-export const BACKEND_URL = "https://stk-backend.herokuapp.com/";
+export const BACKEND_URL = "https://stk-backend.up.railway.app/";

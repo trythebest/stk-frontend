@@ -4,23 +4,23 @@ import { useSelector } from "react-redux";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "./API/axios";
-// import Header from "./component/Header/Header";
-// import Main from "./component/HomeMain/HomeMain";
-// import AskQuestion from "./component/AskQuestion/AskQuestion";
-// import ViewPage from "./component/ViewQuestion/ViewPage";
-// import Auth from "./component/Auth/Auth";
-// import Users from "./component/Users/Users";
-// import Search from "./component/Search/Search";
-// import NotFound from "./component/NotFound/pageNotFound";
+import Header from "./component/Header/Header";
+import Main from "./component/HomeMain/HomeMain";
+import AskQuestion from "./component/AskQuestion/AskQuestion";
+import ViewPage from "./component/ViewQuestion/ViewPage";
+import Auth from "./component/Auth/Auth";
+import Users from "./component/Users/Users";
+import Search from "./component/Search/Search";
+import NotFound from "./component/NotFound/pageNotFound";
 
-const Header = lazy(() => import("./component/Header/Header"));
-const Main = lazy(() => import("./component/HomeMain/HomeMain"));
-const AskQuestion = lazy(() => import("./component/AskQuestion/AskQuestion"));
-const ViewPage = lazy(() => import("./component/ViewQuestion/ViewPage"));
-const Auth = lazy(() => import("./component/Auth/Auth"));
-const Users = lazy(() => import("./component/Users/Users"));
-const Search = lazy(() => import("./component/Search/Search"));
-const NotFound = lazy(() => import("./component/NotFound/pageNotFound"));
+// const Header = lazy(() => import("./component/Header/Header"));
+// const Main = lazy(() => import("./component/HomeMain/HomeMain"));
+// const AskQuestion = lazy(() => import("./component/AskQuestion/AskQuestion"));
+// const ViewPage = lazy(() => import("./component/ViewQuestion/ViewPage"));
+// const Auth = lazy(() => import("./component/Auth/Auth"));
+// const Users = lazy(() => import("./component/Users/Users"));
+// const Search = lazy(() => import("./component/Search/Search"));
+// const NotFound = lazy(() => import("./component/NotFound/pageNotFound"));
 
 function App() {
   const navigate = useNavigate();
@@ -52,7 +52,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Suspense fallback={<div>Loading...</div>}>
+      {/* <Suspense fallback={<div>Loading...</div>}> */}
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/ask-question" element={<AskQuestion />} />
@@ -63,7 +63,7 @@ function App() {
           <Route path="/404" element={<NotFound />} />
           <Route path="*" element={<Navigate replace to="/404" />} />
         </Routes>
-      </Suspense>
+      {/* </Suspense> */}
       <ToastContainer />
     </div>
   );
